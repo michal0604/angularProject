@@ -1,0 +1,37 @@
+<!-- <header>
+  <nav class = "second_navbar"> 
+          <div> 
+         <div class="navbar-header">
+                <span class="navbar-brand">Admin</span>
+         </div>  
+         
+         <ul class="bar">
+                        <li ><a href="admin/company-list" id ="active">Company List</a></li>
+                        <li><a href="admin/customer-list">Customer List</a></li>
+        </ul>
+          </div>
+
+
+  </nav>      
+</header>
+<p>
+  <app-companies></app-companies>
+</p> -->
+<div>
+  <table>
+    <tr>
+      <th>id</th>
+      <th>compName</th>
+      <th>email</th>
+      <th>password</th>
+    </tr>
+  
+    <tr *ngFor="let p of Company">
+      <td>{{p.id}}</td>
+      <td>{{p.compName}}</td>
+      <td>{{p.email}}</td>
+      <td>{{p.password}}</td>
+    </tr>
+  
+  </table>
+  </div>

@@ -1,0 +1,11 @@
+a{
+
+color: blue;
+font-size: x-large;
+}
+.active {
+    color:darkblue;
+    text-decoration: none;
+    font-style: italic;
+    font-family: Arial;
+}
