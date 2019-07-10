@@ -7,6 +7,9 @@ import {AdminComponent} from './components/admin/admin.component';
 import { CompanyComponent } from './components/company/company.component';
 import { CustomerComponent } from './components/customer/customer.component';
 import { AuthguardGuard } from './authguard.guard';
+import { CompanyListComponent } from './components/company-list/company-list.component';
+import { CustomerListComponent } from './components/customer-list/customer-list.component';
+
 
 
 
@@ -20,9 +23,11 @@ const routes: Routes = [
   canActivate: [AuthguardGuard],
   component:AdminComponent},
   {path:"company",component:CompanyComponent},
-  {path:"customer",component:CustomerComponent}
- 
- 
+  {path:"customer",component:CustomerComponent},
+  {path:"companyList",component:CompanyListComponent},
+  {path:"customerList",component:CustomerListComponent}
+
+  
 ];
 
 @NgModule({

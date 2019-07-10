@@ -17,6 +17,11 @@ import { CompanyComponent } from './components/company/company.component';
 import { CustomerComponent } from './components/customer/customer.component';
 import { UserService } from './user.service'
 import { AuthguardGuard } from './authguard.guard';
+import { CompanyListComponent } from './components/company-list/company-list.component';
+import { CustomerListComponent } from './components/customer-list/customer-list.component';
+import { adminService } from './services/admin-service.service';
+
+
 
 const appRoutes:Routes = [
   {
@@ -28,10 +33,8 @@ const appRoutes:Routes = [
     canActivate: [AuthguardGuard],
     component: AdminComponent
   }
+
 ]
-
-
-
 
 
 @NgModule({
@@ -56,15 +59,21 @@ const appRoutes:Routes = [
     CompanyComponent,
    
     CustomerComponent,
+
+    CompanyListComponent,
+    CustomerListComponent
+    
+   
+   
     
   ],
   imports: [
   
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
   ],
-  providers: [UserService, AuthguardGuard],
+  providers: [UserService, AuthguardGuard,adminService],
   bootstrap: [LayoutComponent]
 })
 export class AppModule { }

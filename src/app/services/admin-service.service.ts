@@ -12,8 +12,12 @@ export class adminService {
 //DI=DEPENDENCY INJECTION
   constructor(private http:HttpClient) { }
 
-  // public getAllCompanies():Observable<Company[]>{
-  //   return this.http.get<Company[]>("http://localhost:8080/webCoupon1/rest/admin/getAllCompanies",Company)
+   createCompany(company: ICompany):Observable<any>{
+    return this.http.post("http://localhost:8082/webCoupon1/restm/admin/createCompany?name=PIZZAHUT&pass=1111&email=pizza@pizzaHut.com",company)
+   }      
+    
+    
   }
-
-
+ 
+   
+   

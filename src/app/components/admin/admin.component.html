@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!-- <!DOCTYPE html>
 <html ng-app="adminApp">
 <head>
 <script
@@ -91,4 +91,39 @@
 	</div>
 
 </body>
-</html>
+</html> 
+  -->
+
+<html ng-app="adminApp">
+<head>
+
+<title>admin</title>
+</head>
+<body>
+	<h1>Hello Administrator!</h1>
+	<a routerLink = "/"> back </a>
+
+
+
+<br/>
+
+		<h2>Add Company</h2>
+		
+		name: <input type="text" ng-model="compName" required="required"/><br /> Company
+		password: <input type="password" ng-model="companyPassword" required="required"/><br />
+		Company email: <input type="email" ng-model="email" required="required"/><br />
+		<button ng-click="createCompany()">createCompany</button>
+		{{compAddMessage}} 
+		
+		<br/>
+	<div>  
+         
+	<ul class="bar">
+	 <li><a [routerLink]="['/companyList']">Company List</a></li>
+	 <li><a [routerLink]="['/customerList']">Customer List</a></li>
+
+	</ul>
+	 </div>
+
+
+	</body>
