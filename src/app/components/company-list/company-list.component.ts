@@ -15,10 +15,12 @@ export class CompanyListComponent implements OnInit {
   constructor(private adminsService:adminService) { }
 
   ngOnInit() {
+    this.adminService.getAllCompanies().subscribe(allCompanies =>this.company =allCompanies);
+
   
-    
-    
-    
+  }
+  
+
   }
 
-}
+
