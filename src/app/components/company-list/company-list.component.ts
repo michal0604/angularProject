@@ -9,13 +9,11 @@ import { Company } from 'src/app/models/company';
 })
 export class CompanyListComponent implements OnInit {
   public company:Company[];
-  adminService: any;
   
-
   constructor(private adminsService:adminService) { }
 
   ngOnInit() {
-    this.adminService.getAllCompanies().subscribe(allCompanies =>this.company =allCompanies);
+    this.adminsService.getAllCompanies().subscribe(allCompanies =>this.company =allCompanies);
 
   
   }

@@ -20,6 +20,7 @@ import { AuthguardGuard } from './authguard.guard';
 import { CompanyListComponent } from './components/company-list/company-list.component';
 import { CustomerListComponent } from './components/customer-list/customer-list.component';
 import { adminService } from './services/admin-service.service';
+import { UpdateCompanyComponent } from './components/update-company/update-company.component';
 
 
 
@@ -61,7 +62,8 @@ const appRoutes:Routes = [
     CustomerComponent,
 
     CompanyListComponent,
-    CustomerListComponent
+    CustomerListComponent,
+    UpdateCompanyComponent
     
    
    

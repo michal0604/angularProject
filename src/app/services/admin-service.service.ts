@@ -17,7 +17,7 @@ export class adminService {
    }   
    
    public getAllCompanies():Observable<Company[]>{
-    return this.http.get<Company[]>("http://localhost:8082/webCoupon1/restm/admin/getAllCompanies",);
+    return this.http.get<Company[]>("http://localhost:8082/webCoupon1/restm/admin/getAllCompanies");
     
     
   }
