@@ -104,23 +104,16 @@
 	<a routerLink = "/"> back </a>
 
 
-
-<br/>
-
-		<h2>Add Company</h2>
-		
-		name: <input type="text" ng-model="compName" required="required"/><br /> Company
-		password: <input type="password" ng-model="companyPassword" required="required"/><br />
-		Company email: <input type="email" ng-model="email" required="required"/><br />
-		<button ng-click="createCompany()">createCompany</button>
-		{{compAddMessage}} 
-		
-		<br/>
 	<div>  
          
 	<ul class="bar">
+	<li><a [routerLink]="['/create-company']">create company</a></li>	
 	 <li><a [routerLink]="['/companyList']">Company List</a></li>
 	 <li><a [routerLink]="['/customerList']">Customer List</a></li>
+	 <li><a [routerLink]="['/update-customer']">Update Customer</a></li>
+	 <li><a [routerLink]="['/update-company']">Update Company</a></li>
+	 <li><a [routerLink]="['/create-customer']">Create Customer</a></li>
+	 
 
 	</ul>
 	 </div>

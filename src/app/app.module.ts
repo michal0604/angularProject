@@ -17,10 +17,17 @@ import { CompanyComponent } from './components/company/company.component';
 import { CustomerComponent } from './components/customer/customer.component';
 import { UserService } from './user.service'
 import { AuthguardGuard } from './authguard.guard';
-import { CompanyListComponent } from './components/company-list/company-list.component';
-import { CustomerListComponent } from './components/customer-list/customer-list.component';
+
+import { CustomerListComponent } from './components/admin/customer-list/customer-list.component';
 import { adminService } from './services/admin-service.service';
-import { UpdateCompanyComponent } from './components/update-company/update-company.component';
+import { UpdateCompanyComponent } from './components/admin/update-company/update-company.component';
+import { CompanyListComponent } from './components/admin/company-list/company-list.component';
+import { UpdateCustomerComponent } from './components/admin/update-customer/update-customer.component';
+import { CreateCompanyComponent } from './components/admin/create-company/create-company.component';
+import { CreateCustomerComponent } from './components/admin/create-customer/create-customer.component';
+
+
+
 
 
 
@@ -34,6 +41,8 @@ const appRoutes:Routes = [
     canActivate: [AuthguardGuard],
     component: AdminComponent
   }
+ 
+  
 
 ]
 
@@ -61,13 +70,16 @@ const appRoutes:Routes = [
    
     CustomerComponent,
 
-    CompanyListComponent,
+    
     CustomerListComponent,
-    UpdateCompanyComponent
-    
+    UpdateCompanyComponent,
+    CompanyListComponent,
+    UpdateCustomerComponent,
+    CreateCompanyComponent,
+    CreateCustomerComponent
    
    
-    
+ 
   ],
   imports: [
   

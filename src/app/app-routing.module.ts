@@ -7,8 +7,14 @@ import {AdminComponent} from './components/admin/admin.component';
 import { CompanyComponent } from './components/company/company.component';
 import { CustomerComponent } from './components/customer/customer.component';
 import { AuthguardGuard } from './authguard.guard';
-import { CompanyListComponent } from './components/company-list/company-list.component';
-import { CustomerListComponent } from './components/customer-list/customer-list.component';
+
+import { CustomerListComponent } from './components/admin/customer-list/customer-list.component';
+import { CompanyListComponent } from './components/admin/company-list/company-list.component';
+import { UpdateCustomerComponent } from './components/admin/update-customer/update-customer.component';
+import { CreateCompanyComponent } from './components/admin/create-company/create-company.component';
+import { UpdateCompanyComponent } from './components/admin/update-company/update-company.component';
+import { CreateCustomerComponent } from './components/admin/create-customer/create-customer.component';
+
 
 
 
@@ -25,7 +31,11 @@ const routes: Routes = [
   {path:"company",component:CompanyComponent},
   {path:"customer",component:CustomerComponent},
   {path:"companyList",component:CompanyListComponent},
-  {path:"customerList",component:CustomerListComponent}
+  {path:"customerList",component:CustomerListComponent},
+  {path:"update-customer",component:UpdateCustomerComponent},
+  {path:"create-company",component:CreateCompanyComponent},
+  {path:"update-company",component:UpdateCompanyComponent},
+  {path:"create-customer",component:CreateCustomerComponent}
 
   
 ];

@@ -13,7 +13,7 @@ import { Company } from 'src/app/models/company';
 })
 export class AdminComponent implements OnInit {
   public company:Company;
- public icompany : ICompany;
+//  public icompany : ICompany;
 
   constructor(private user: UserService,private adminService:adminService) { }
   
@@ -26,19 +26,16 @@ export class AdminComponent implements OnInit {
   }
 
   initForm(){
-    this.icompany = {
+    this.company = {
+      companyId:null,
       compName : null,
-      pass : null,
+      password : null,
       email : null
     }
   }
 
-  createCompany(){
-    this.adminService.createCompany(this.icompany).subscribe((param) => 
-    {
-      console.log('check')
-    }
-    )
+  
+    
   }
 
-}
+

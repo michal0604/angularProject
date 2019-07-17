@@ -1,6 +1,7 @@
  interface ICompany {
+     companyId:number;
     compName : string;
-    pass : string;
+    password : string;
     email : string;
 
 }
