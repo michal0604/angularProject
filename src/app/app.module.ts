@@ -25,6 +25,18 @@ import { CompanyListComponent } from './components/admin/company-list/company-li
 import { UpdateCustomerComponent } from './components/admin/update-customer/update-customer.component';
 import { CreateCompanyComponent } from './components/admin/create-company/create-company.component';
 import { CreateCustomerComponent } from './components/admin/create-customer/create-customer.component';
+import { GetCompanyComponent } from './components/admin/get-company/get-company.component';
+import { GetCustomerComponent } from './components/admin/get-customer/get-customer.component';
+import { RemoveCompanyComponent } from './components/admin/remove-company/remove-company.component';
+import { RemoveCustomerComponent } from './components/admin/remove-customer/remove-customer.component';
+import { CreateCouponComponent } from './components/company/create-coupon/create-coupon.component';
+import { GetCouponsComponent } from './components/company/get-coupons/get-coupons.component';
+import { GetCouponsByDateComponent } from './components/company/get-coupons-by-date/get-coupons-by-date.component';
+import { GetCouponsByPriceComponent } from './components/company/get-coupons-by-price/get-coupons-by-price.component';
+import { GetCouponsByTypeComponent } from './components/company/get-coupons-by-type/get-coupons-by-type.component';
+import { GetMyCompanyComponent } from './components/company/get-my-company/get-my-company.component';
+import { RemoveCouponComponent } from './components/company/remove-coupon/remove-coupon.component';
+import { UpdateCouponComponent } from './components/company/update-coupon/update-coupon.component';
 
 
 
@@ -76,7 +88,19 @@ const appRoutes:Routes = [
     CompanyListComponent,
     UpdateCustomerComponent,
     CreateCompanyComponent,
-    CreateCustomerComponent
+    CreateCustomerComponent,
+    GetCompanyComponent,
+    GetCustomerComponent,
+    RemoveCompanyComponent,
+    RemoveCustomerComponent,
+    CreateCouponComponent,
+    GetCouponsComponent,
+    GetCouponsByDateComponent,
+    GetCouponsByPriceComponent,
+    GetCouponsByTypeComponent,
+    GetMyCompanyComponent,
+    RemoveCouponComponent,
+    UpdateCouponComponent
    
    
  

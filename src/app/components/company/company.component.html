@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html ng-app="companyApp">
 <head>
 <script
@@ -122,4 +122,33 @@
 
 
 </body>
-</html>
+</html> -->
+
+<html ng-app="companyApp">
+<head>
+
+<title>company</title>
+</head>
+<body>
+	<h1>Hello Company!</h1>
+	<a routerLink = "/"> back </a>
+
+
+	<div>  
+         
+	<ul class="bar">
+	<li><a [routerLink]="['/create-coupon']">create coupon</a></li>	
+	 <li><a [routerLink]="['/get-coupons']">get-coupons </a></li>
+	 <li><a [routerLink]="['/get-coupons-by-date']">get-coupons-by-date</a></li>
+	 <li><a [routerLink]="['/get-coupons-by-price']">get-coupons-by-price</a></li>
+	 <li><a [routerLink]="['/get-coupons-by-type']">get-coupons-by-type</a></li>
+	 <li><a [routerLink]="['/get-my-company']">Get My Company</a></li>
+	 <li><a [routerLink]="['/remove-coupon']">Remove Coupon</a></li>
+	 <li><a [routerLink]="['/update-coupon']">Update Coupon</a></li>
+	 
+
+	</ul>
+	 </div>
+
+
+	</body>
