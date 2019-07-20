@@ -12,13 +12,13 @@ export class CompanyListComponent implements OnInit {
   
   constructor(private adminsService:adminService) { }
 
-  ngOnInit() {
-    this.adminsService.getAllCompanies().subscribe((response:any) =>{
-       this.companies = response;
+   ngOnInit() {
+    this.adminsService.getAllCompanies().subscribe(companies =>{
+       this.companies = companies;
     },err =>{
       alert("Error:"+err.massage);
     
     });
-
+   
   
   }}

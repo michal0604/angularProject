@@ -4,6 +4,7 @@ import { Company } from '../models/company';
 import { Observable } from 'rxjs';
 import { catchError, map, tap } from 'rxjs/operators';
 import 'rxjs/add/operator/map';
+import { Customer } from '../models/customer';
 
 
 
@@ -21,17 +22,22 @@ export class adminService {
     return Observable.throw(error);
   }
 
-   createCompany(company: Company):Observable<any>{
-    return this.http.post("http://localhost:8082/webCoupon1/rest/admin/createCompany",company)
+   createCompany(company: Company):Observable<Company>{
+    return this.http.post<Company>("http://localhost:8082/webCoupon1/rest/admin/createCompany",company,{withCredentials:true});
    }   
    
    public getAllCompanies():Observable<Company[]>{
-    return this.http.get<Company[]>("http://localhost:8082/webCoupon1/rest/admin/getAllCompanies")
+    return this.http.get<Company[]>("http://localhost:8082/webCoupon1/rest/admin/getAllCompanies",{withCredentials:true});
     // .map((res) => res.json());
-     
-      
-  }
+
+     }
+     public getAllCustomers():Observable<Customer[]>{
+      return this.http.get<Customer[]>("http://localhost:8082/webCoupon1/rest/admin/getAllCustomers",{withCredentials:true});
+      // .map((res) => res.json());
   
+       }
+  
+    }
  
    
-}
+

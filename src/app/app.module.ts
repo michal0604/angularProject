@@ -37,6 +37,7 @@ import { GetCouponsByTypeComponent } from './components/company/get-coupons-by-t
 import { GetMyCompanyComponent } from './components/company/get-my-company/get-my-company.component';
 import { RemoveCouponComponent } from './components/company/remove-coupon/remove-coupon.component';
 import { UpdateCouponComponent } from './components/company/update-coupon/update-coupon.component';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -110,6 +111,7 @@ const appRoutes:Routes = [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    FormsModule
   ],
   providers: [UserService, AuthguardGuard,adminService],
   bootstrap: [LayoutComponent]

@@ -1,4 +1,4 @@
-<div>
+<!-- <div>
 <br/>
 
 		<h2>Add Company</h2>
@@ -6,8 +6,39 @@
 		name: <input type="text" ng-model="compName" required="required"/><br /> Company
 		password: <input type="password" ng-model="companyPassword" required="required"/><br />
 		Company email: <input type="email" ng-model="email" required="required"/><br />
-		<button ng-click="createCompany()">createCompany</button>
+		<button onclick="createCompany()">createCompany</button>
 		{{compAddMessage}} 
 		
 		<br/>
-  </div>
+  </div> -->
+  <!-- <form #formInfo="ngForm">
+	  <input #nameInfo= "ngModel" required pattern="^[A-Z].*$" type="text" placeholder="compName.."[(ngModel)]="company.compName" name="compName">
+	  <span *ngIf="compNameInfo.errors?.required && compNameInfo.touched">Missing name</span>
+	  <span *ngIf="compNameInfo.errors?.pattern && compNameInfo.touched">Must start with a capital letter!</span>
+	 
+	  <br><br>
+	  <input #passwordInfo="ngModel" required min="0" max="1000" type="password" placeholder="password.."[(ngModel)]="company.password" name="password">
+	  <span *ngIf="passwordInfo.errors?.required && passwordInfo.touched">Missing password</span>
+	  <br><br>
+	  <input  #emailInfo ="ngModel" required pattern="=^[\w-\.]+
+	  @([\w-]+\.)+[\w-]{2,4}$"  type="text" placeholder="email.."[(ngModel)]="company.email" name="email">
+	
+	  <button [disabled]="!formInfo.form.valid" (click)="createCompany()">create company</button>
+
+
+  <!-- </form> -->
+
+
+   <form >
+	  <input  type="text" name="compName"[(ngModel)]="company.compName"  placeholder="compName..">
+	  <br><br>
+	  <input type="text" name ="password"[(ngModel)]="company.password" placeholder="password..">
+	  
+	  <br><br>
+	  <input  type="text" name="email" [(ngModel)]="company.email" placeholder="email..">
+	
+	  <button (click)="createCompany()">create company</button>
+
+
+  </form>  
+
