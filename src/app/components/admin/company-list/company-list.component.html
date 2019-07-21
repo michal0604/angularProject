@@ -1,26 +1,26 @@
-<a routerLink = '/company-list'> + Create Company</a>
+<a routerLink = "/create-company"> + Create Company</a>
 
 <h1>
-  Companies
+  List of All Companies
 </h1>
 <div>
 <table>
-  <th>companyId</th>
+  
   <th>compName</th>
   <th>password</th>
   <th>email</th>
   
   <tr *ngFor = "let p of companies">
-    <td>{{p.companyId}}</td>
-    <td>{{p.compName}}</td>
+    <td>
+      <a routerLink="/get-company/{{p.companyId}}">{{p.compName}}</a>
+    </td> 
+    
     <td>{{p.password}}</td>
     <td>{{p.email}}</td>
-
+  </tr> 
+  </table>
+</div>
    
     
-    <!-- <td (click) = "deleteCompany(company.id)"><a>DELETE</a></td> -->
-    <!-- <td [routerLink] = "['/updateCompany', Company.id]"><a>UPDATE</a></td> -->
-  <!-- </tr> 
- </table>
+    
 
- </div>  --> -->

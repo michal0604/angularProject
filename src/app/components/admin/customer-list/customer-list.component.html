@@ -5,13 +5,18 @@
 </h1>
 <div>
 <table>
-  <th>customerId</th>
+  <!-- <th>customerId</th> -->
   <th>customerName</th>
   <th>password</th>
- 
-  
   <tr *ngFor = "let p of customers">
-    <td>{{p.customerId}}</td>
-    <td>{{p.customerName}}</td>
+      <td>
+        <a routerLink="/get-customer/{{p.customerId}}">{{p.customerName}}</a>
+      </td> 
+  
+  
+    <!-- <td>{{p.customerId}}</td> -->
+    <!-- <td>{{p.customerName}}</td> -->
     <td>{{p.password}}</td>
-    
+  </tr>
+  </table>
+  </div>

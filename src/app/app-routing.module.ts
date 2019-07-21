@@ -58,7 +58,10 @@ const routes: Routes = [
   {path:"get-coupons-by-type",component:GetCouponsByTypeComponent},
   {path:"get-my-company",component:RemoveCustomerComponent},
   {path:"remove-coupon",component:RemoveCouponComponent},
-  {path:"update-coupon",component:UpdateCouponComponent}
+  {path:"update-coupon",component:UpdateCouponComponent},
+  {path:"get-company/:companyId",component:GetCompanyComponent},
+  {path:"get-customer/:customerId",component:GetCustomerComponent}
+  
 ];
 
 @NgModule({

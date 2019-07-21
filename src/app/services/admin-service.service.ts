@@ -1,10 +1,12 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Company } from '../models/company';
-import { Observable } from 'rxjs';
+import { Observable, observable } from 'rxjs';
 import { catchError, map, tap } from 'rxjs/operators';
 import 'rxjs/add/operator/map';
 import { Customer } from '../models/customer';
+import { Coupon } from '../models/coupon';
+import { GetCustomerComponent } from '../components/admin/get-customer/get-customer.component';
 
 
 
@@ -36,8 +38,34 @@ export class adminService {
       // .map((res) => res.json());
   
        }
+       createCustomer(customer: Customer):Observable<Customer>{
+        return this.http.post<Customer>("http://localhost:8082/webCoupon1/rest/admin/createCustomer",customer,{withCredentials:true});
+       }  
   
+       createCoupon(coupon: Coupon):Observable<Coupon>{
+        return this.http.post<Coupon>("http://localhost:8082/webCoupon1/rest/company/createCoupon",coupon,{withCredentials:true});
     }
  
-   
+    public getCoupons():Observable<Coupon[]>{
+      return this.http.get<Coupon[]>("http://localhost:8082/webCoupon1/rest/company/getCoupons",{withCredentials:true});
+      // .map((res) => res.json());
+  
+       }
+       getCompany(companyId:number):Observable<Company>{
+        return this.http.get<Company>("http://localhost:8082/webCoupon1/rest/admin/getCompany/"+ companyId );
+       }
+       
+       getCustomer(customerId: number):Observable<Customer>{
+        return this.http.get<Customer>("http://localhost:8082/webCoupon1/rest/admin/getCustomer/"+ customerId );
+       }
+
+       updateCompany(company: Company) {
+        
+        return this.http.put("http://localhost:8082/webCoupon1/rest/admin/updateCompany", company);
+         
+      }
+      }
+    
+
+ 
 

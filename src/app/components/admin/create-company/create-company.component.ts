@@ -30,13 +30,13 @@ export class CreateCompanyComponent {
   createCompany():void{
    const observable =this.adminService.createCompany(this.company);
    observable.subscribe(createCompany=>{
-     alert(JSON.stringify(this.createCompany));
+     //alert(JSON.stringify(this.createCompany));
      this.router.navigate(["/home"]);
    },response =>{
    console.log(response);
   
    });
-  alert(JSON.stringify(this.company));
+  //alert(JSON.stringify(this.company));
   }
   
    
