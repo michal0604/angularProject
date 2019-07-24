@@ -7,8 +7,24 @@
     <br><br>
     <input  type="text" name="amount" [(ngModel)]="coupon.amount" placeholder="amount..">
     <br><br>
-    <input  type="text" name="type" [(ngModel)]="coupon.type" placeholder="type..">
-    <br><br>
+    <!-- <input  type="text" name="type" [(ngModel)]="coupon.type" placeholder="type..">
+    <br><br> -->
+
+    <label for="fname">Type of the Coupon</label>
+      <select id="type" name="type"  palceholder="Insert Coupon Type" required ngModel>
+            <option value="RESTURANTS">RESTURANTS</option>
+            <!-- <option value="ELECTRICITY">ELECTRICITY</option> -->
+            <option value="FOOD">FOOD</option>
+            <option value="HEALTH">HEALTH</option>
+            <option value="SPORTS">SPORTS</option>
+            <option value="CAMPING">CAMPING</option>
+            <option value="TRAVELING">TRAVELING</option>
+      </select> 
+
+
+
+
+
     <input  type="text" name="message" [(ngModel)]="coupon.message" placeholder="message..">
     <br><br>
     <input  type="text" name="price" [(ngModel)]="coupon.price" placeholder="price..">

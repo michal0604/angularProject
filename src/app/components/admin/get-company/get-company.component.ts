@@ -14,6 +14,8 @@ export class GetCompanyComponent implements OnInit {
 
   constructor(private activatedRoute:ActivatedRoute,private adminservice:adminService) { }
 
+
+  
 public ngOnInit():void{
 const id = +this.activatedRoute.snapshot.params.companyId;
 
@@ -22,16 +24,29 @@ observable.subscribe(comp=>{
 this.company = comp;
 });
 }
-}
 
-
-
-   
-
-
-  
-    
+updateCompany():void{
+  const observable =this.adminservice.updateCompany(this.company);
+  observable.subscribe(updateCompany=>{
+    //alert(JSON.stringify(this.updateCompany));
+    //this.router.navigate(["/home"]);
+  },response =>{
+  console.log(response);
   
  
+  });
+ //alert(JSON.stringify(this.company));
+ }
 
-
+// updateCompany():void{
+//   //console.log(this.company);
+//   const id = +this.activatedRoute.snapshot.params.customerId;
+//   //console.log(this.company);
+//   const observable = this.adminservice.updateCompany(this.company);
+//   //console.log(this.company);
+//   observable.subscribe(cust=>{
+//     this.company = cust ;
+//     //console.log(this.company);
+//     });
+//   }
+}

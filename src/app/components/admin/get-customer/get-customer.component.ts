@@ -13,7 +13,7 @@ import { Customer } from 'src/app/models/customer';
 export class GetCustomerComponent implements OnInit {
   
   public customer:Customer;
-
+  public company:Company;
   constructor(private activatedRoute:ActivatedRoute,private adminservice:adminService) { }
 
 public ngOnInit():void{
@@ -24,6 +24,27 @@ observable.subscribe(cust=>{
 this.customer = cust ;
 });
 }
+
+
+
+
+
+
+
+// updateCompany(id){
+//   const observable =this.adminservice.updateCompany(id);
+//   observable.subscribe(comp=>{
+//     this.company = comp;
+//     alert(JSON.stringify(this.updateCompany));
+//   //this.router.navigate(["/company-list"]);
+// },response =>{
+// console.log(id);
+
+// });
+
+
+// }
+
 }
 
 

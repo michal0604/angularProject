@@ -1,23 +1,36 @@
+<div class="cotainer">
 <a routerLink = "/create-company"> + Create Company</a>
 
 <h1>
   List of All Companies
 </h1>
-<div>
+
 <table>
-  
+  <thead>
   <th>compName</th>
   <th>password</th>
   <th>email</th>
+  <th>Delete</th> 
+</thead>
+<tbody>
+
   
   <tr *ngFor = "let p of companies">
     <td>
       <a routerLink="/get-company/{{p.companyId}}">{{p.compName}}</a>
+      
     </td> 
     
     <td>{{p.password}}</td>
     <td>{{p.email}}</td>
+    <td><button class="btn this removebuttn"(click)="removeCompany(p.companyId)">Delete</button>
+     
+      <!-- <button class="nav-link" routerLink="/update-company/">Update</button> -->
+    </td>
+   
   </tr> 
+</tbody>
+  
   </table>
 </div>
    

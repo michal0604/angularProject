@@ -54,16 +54,23 @@ export class adminService {
        getCompany(companyId:number):Observable<Company>{
         return this.http.get<Company>("http://localhost:8082/webCoupon1/rest/admin/getCompany/"+ companyId );
        }
+
+       removeCompany(companyId: number):Observable<Company>{
+        return this.http.delete<Company>("http://localhost:8082/webCoupon1/rest/admin/removeCompany/"+companyId);
+       }
        
        getCustomer(customerId: number):Observable<Customer>{
         return this.http.get<Customer>("http://localhost:8082/webCoupon1/rest/admin/getCustomer/"+ customerId );
        }
 
-       updateCompany(company: Company) {
+       updateCompany(company: Company):Observable<Company> {
         
-        return this.http.put("http://localhost:8082/webCoupon1/rest/admin/updateCompany", company);
+        return this.http.post<Company>("http://localhost:8082/webCoupon1/rest/admin/updateCompany/", company,{withCredentials:true});
          
       }
+      removeCustomer(customerId: number):Observable<Customer>{
+        return this.http.delete<Customer>("http://localhost:8082/webCoupon1/rest/admin/removeCustomer/"+customerId);
+       }
       }
     
 

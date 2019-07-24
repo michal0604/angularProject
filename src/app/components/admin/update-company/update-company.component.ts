@@ -12,10 +12,12 @@ import { adminService } from 'src/app/services/admin-service.service';
 export class UpdateCompanyComponent implements OnInit {
   loadingCompanies = true;
   companies: Company[] = [];
-  company = new Company();
+  //company = new Company();
   updateCompanyForm: FormGroup;
   getAllcompanies: any;
-
+  
+  public company:Company;
+  
   constructor(private router: Router, private route: ActivatedRoute,private adminService:adminService) { }
 
   ngOnInit() {
@@ -28,16 +30,18 @@ export class UpdateCompanyComponent implements OnInit {
   setCompany(company: Company) {
     this.company = company;
   }
-  updateCompany() {
-    this.adminService.updateCompany(this.company).subscribe(
-      (res) => {
-        this.getAllcompanies();
-      },
-     
-    );
-  }
+  updateCompany(id){
+    const observable =this.adminService.updateCompany(id);
+    observable.subscribe(comp=>{
+      this.company = comp;
+      alert(JSON.stringify(this.updateCompany));
+    this.router.navigate(["/company-list"]);
+  },() =>{
+  console.log(id);
+ 
+  });
 
 
   }
 
-
+}

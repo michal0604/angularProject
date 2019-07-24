@@ -46,6 +46,7 @@ const routes: Routes = [
   {path:"update-customer",component:UpdateCustomerComponent},
   {path:"create-company",component:CreateCompanyComponent},
   {path:"update-company",component:UpdateCompanyComponent},
+  {path:"update-company/:companyId",component:UpdateCompanyComponent},
   {path:"create-customer",component:CreateCustomerComponent},
   {path:"get-company",component:GetCompanyComponent},
   {path:"get-customer",component:GetCustomerComponent},

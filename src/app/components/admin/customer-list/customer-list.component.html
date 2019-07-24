@@ -1,22 +1,28 @@
+<div class="container">
 <a routerLink = '/customer-list'> + Create Customer</a>
 
 <h1>
   Customers
 </h1>
-<div>
+
 <table>
-  <!-- <th>customerId</th> -->
+  <thead>
   <th>customerName</th>
   <th>password</th>
+  <th>Operation</th>
+  </thead>
+  <tbody>
   <tr *ngFor = "let p of customers">
       <td>
         <a routerLink="/get-customer/{{p.customerId}}">{{p.customerName}}</a>
       </td> 
-  
-  
-    <!-- <td>{{p.customerId}}</td> -->
-    <!-- <td>{{p.customerName}}</td> -->
+
     <td>{{p.password}}</td>
+    <td><button class="btn btn-danger"(click)="removeCustomer(p.customerId)">Delete</button>
+      <button class="btn btn-danger"(click)="updateCompany(p.customerId)">Update</button>
+    </td>
+
   </tr>
+</tbody>
   </table>
   </div>

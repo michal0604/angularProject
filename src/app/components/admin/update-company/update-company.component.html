@@ -1,14 +1,14 @@
 <h2>
-    Update Product
+    Update Company
   </h2>
   
   <p *ngIf = "!exist">
-    Product doesn't exist
+    Company doesn't exist
   </p>
   
-  <form id = "formNewCompany" name = "formNewCompany" #companyData = "ngForm" (ngSubmit) = "updateCompany(companyData.value)">
-    <label>compName: </label><input type = "text" name="compName" id="compName" placeholder="name" [(ngModel)] = "company.name" ngModel><br>
-    <label>password: </label><input type = "text" name="password" id="password" [(ngModel)] = "company.password" placeholder="password" ngModel><br>
+  <form id = "formNewCompany" name = "formNewCompany" #companyData = "ngForm" (ngSubmit) = "updateCompany()">
+    <!-- <label>compName: </label><input type = "text" name="Compnay Name" id=p.compName placeholder=compName [(ngModel)] = "company.compName" ngModel><br> -->
+    <label>password: </label><input type = "text" name="password" id="password"  placeholder="password" [(ngModel)] = "company.password" ngModel><br>
     <label>email: </label><input type = "text" name="email" id="email" [(ngModel)] = "company.email" placeholder="email" ngModel><br>
     <input type="submit" value = "Update Product">
   </form>

@@ -39,7 +39,7 @@ export class CreateCompanyComponent {
   //alert(JSON.stringify(this.company));
   }
   
-   
+  
   
   }
  

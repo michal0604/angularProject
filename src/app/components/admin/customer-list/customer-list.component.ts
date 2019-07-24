@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { adminService } from 'src/app/services/admin-service.service';
 import { Customer } from 'src/app/models/customer';
+import { Company } from 'src/app/models/company';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-customer-list',
@@ -9,8 +11,11 @@ import { Customer } from 'src/app/models/customer';
 })
 export class CustomerListComponent implements OnInit {
   public customers:Customer[];
+  public customer:Customer;
+  router:any;
+  getAllcustomers:any;
 
-  constructor(private adminsService:adminService) { }
+  constructor(private activatedRoute:ActivatedRoute ,private adminsService:adminService) { }
 
   ngOnInit() {
     this.adminsService.getAllCustomers().subscribe(customers =>{
@@ -20,8 +25,22 @@ export class CustomerListComponent implements OnInit {
     });
    
   
-  }}
+  }
 
-
+  removeCustomer(id){
+    //const id = +this.activatedRoute.snapshot.params.companyId;
+    const observable = this.adminsService.removeCustomer(id);
+    observable.subscribe(cust=>{
+      this.customer = cust;
+    
+      alert(JSON.stringify(this.removeCustomer));
+      this.router.navigate(["/home"]);
+    },response =>{
+    console.log(id);
+   
+    });
   
 
+  }
+  
+  }
