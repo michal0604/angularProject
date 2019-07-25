@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { adminService } from 'src/app/services/admin-service.service';
 import { Coupon } from 'src/app/models/coupon';
+import { ActivatedRoute } from '@angular/router';
+import { CompanyServiceService } from 'src/app/company-service.service';
 
 @Component({
   selector: 'app-get-coupons',
@@ -9,16 +11,36 @@ import { Coupon } from 'src/app/models/coupon';
 })
 export class GetCouponsComponent implements OnInit {
   public coupons:Coupon[];
+  public coupon:Coupon;
+  router:any;
+  getCoupons:any;
 
-  constructor(private adminsService:adminService) { }
+  constructor(private activatedRoute:ActivatedRoute ,private companyService:CompanyServiceService) { }
 
   ngOnInit() {
-    this.adminsService.getCoupons().subscribe(coupons =>{
-      this.coupons = coupons
+    this.companyService.getCoupons().subscribe(coupons =>{
+      this.coupons = coupons;
    },err =>{
      alert("Error:"+err.massage)
     });
-   
   
-  }}
+    
+  }
+    removeCoupon(id){
+      //const id = +this.activatedRoute.snapshot.params.companyId;
+      const observable = this.companyService.removeCoupon(id);
+      observable.subscribe(coup=>{
+         this.coupon=coup;
+      
+        alert(JSON.stringify(this.removeCoupon));
+        this.router.navigate(["/home"]);
+      },response =>{
+      console.log(id);
+     
+      });
+     
+    
   
+    }
+
+}

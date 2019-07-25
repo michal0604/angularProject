@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Coupon } from 'src/app/models/coupon';
 import { adminService } from 'src/app/services/admin-service.service';
 import { Router } from '@angular/router';
+import { CompanyServiceService } from 'src/app/company-service.service';
 
 @Component({
   selector: 'app-create-coupon',
@@ -10,11 +11,12 @@ import { Router } from '@angular/router';
 })
 export class CreateCouponComponent  {
   public coupon:Coupon=new Coupon();
+  getCoupons:any;
 
-  constructor(private adminService:adminService,private router:Router) { }
+  constructor(private companyService:CompanyServiceService,private router:Router) { }
 
   createCoupon():void{
-    const observable =this.adminService.createCoupon(this.coupon);
+    const observable =this.companyService.createCoupon(this.coupon);
     observable.subscribe(createCoupon=>{
       alert(JSON.stringify(this.createCoupon));
       this.router.navigate(["/home"]);

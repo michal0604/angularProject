@@ -1,14 +1,14 @@
 export class Coupon {
     public constructor(
-    private couponId: number=0,
-    private title?: string,
-    private startDate?: Date,
-    private endDate?: Date,
-    private amount?: number,
-    private type?: CouponType,
-    private message?: string,
-    private price?: number,
-    private image?: string)
+    public couponId?: number,
+    public title?: string,
+    public start_date?: Date,
+    public end_date?: Date,
+    public amount?: number,
+    public type?: CouponType,
+    public message?: string,
+    public price?: number,
+    public image?: string)
     {}
 }
 

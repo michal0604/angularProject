@@ -5,7 +5,7 @@
 	  <br><br>
 	  <input  type="date" name="end_date" [(ngModel)]="coupon.end_date" placeholder="end_date..">
     <br><br>
-    <input  type="text" name="amount" [(ngModel)]="coupon.amount" placeholder="amount..">
+    <input  type="number" name="amount" [(ngModel)]="coupon.amount" placeholder="amount..">
     <br><br>
     <!-- <input  type="text" name="type" [(ngModel)]="coupon.type" placeholder="type..">
     <br><br> -->
@@ -27,7 +27,7 @@
 
     <input  type="text" name="message" [(ngModel)]="coupon.message" placeholder="message..">
     <br><br>
-    <input  type="text" name="price" [(ngModel)]="coupon.price" placeholder="price..">
+    <input  type="number" name="price" [(ngModel)]="coupon.price" placeholder="price..">
     <br><br>
     <input  type="text" name="image" [(ngModel)]="coupon.image" placeholder="image..">
 	  <button (click)="createCoupon()">create coupon</button>

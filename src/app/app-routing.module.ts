@@ -25,6 +25,7 @@ import { GetCouponsByPriceComponent } from './components/company/get-coupons-by-
 import { GetCouponsByTypeComponent } from './components/company/get-coupons-by-type/get-coupons-by-type.component';
 import { RemoveCouponComponent } from './components/company/remove-coupon/remove-coupon.component';
 import { UpdateCouponComponent } from './components/company/update-coupon/update-coupon.component';
+import { GetCouponComponent } from './components/company/get-coupon/get-coupon.component';
 
 
 
@@ -61,8 +62,9 @@ const routes: Routes = [
   {path:"remove-coupon",component:RemoveCouponComponent},
   {path:"update-coupon",component:UpdateCouponComponent},
   {path:"get-company/:companyId",component:GetCompanyComponent},
-  {path:"get-customer/:customerId",component:GetCustomerComponent}
-  
+  {path:"get-customer/:customerId",component:GetCustomerComponent},
+  {path:"get-coupon/:couponId",component:GetCouponComponent},
+  {path:"get-coupon",component:GetCouponComponent}
 ];
 
 @NgModule({

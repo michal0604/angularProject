@@ -24,6 +24,17 @@ observable.subscribe(cust=>{
 this.customer = cust ;
 });
 }
+updateCustomer():void{
+  const observable =this.adminservice.updateCustomer(this.customer);
+  observable.subscribe(updateCustomer=>{
+    //alert(JSON.stringify(this.updateCompany));
+    //this.router.navigate(["/home"]);
+  },response =>{
+  console.log(response);
+  
+ 
+  });
+}
 
 
 

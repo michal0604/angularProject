@@ -42,15 +42,16 @@ export class adminService {
         return this.http.post<Customer>("http://localhost:8082/webCoupon1/rest/admin/createCustomer",customer,{withCredentials:true});
        }  
   
-       createCoupon(coupon: Coupon):Observable<Coupon>{
-        return this.http.post<Coupon>("http://localhost:8082/webCoupon1/rest/company/createCoupon",coupon,{withCredentials:true});
-    }
+    //    createCoupon(coupon: Coupon):Observable<Coupon>{
+    //     return this.http.post<Coupon>("http://localhost:8082/webCoupon1/rest/company/createCoupon",coupon,{withCredentials:true});
+    // }
  
-    public getCoupons():Observable<Coupon[]>{
-      return this.http.get<Coupon[]>("http://localhost:8082/webCoupon1/rest/company/getCoupons",{withCredentials:true});
-      // .map((res) => res.json());
+    // public getCoupons():Observable<Coupon[]>{
+    //   return this.http.get<Coupon[]>("http://localhost:8082/webCoupon1/rest/company/getCoupons",{withCredentials:true});
+    //   // .map((res) => res.json());
   
-       }
+    //    }
+     
        getCompany(companyId:number):Observable<Company>{
         return this.http.get<Company>("http://localhost:8082/webCoupon1/rest/admin/getCompany/"+ companyId );
        }
@@ -71,6 +72,14 @@ export class adminService {
       removeCustomer(customerId: number):Observable<Customer>{
         return this.http.delete<Customer>("http://localhost:8082/webCoupon1/rest/admin/removeCustomer/"+customerId);
        }
+       updateCustomer(customer: Customer):Observable<Customer> {
+        
+        return this.http.post<Customer>("http://localhost:8082/webCoupon1/rest/admin/updateCustomer/", customer,{withCredentials:true});
+         
+      }
+      // removeCoupon(couponId: number):Observable<Coupon>{
+      //   return this.http.delete<Coupon>("http://localhost:8082/webCoupon1/rest/company/removeCoupon/"+couponId);
+      //  }
       }
     
 

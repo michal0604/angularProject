@@ -1,11 +1,23 @@
-<div>
+<!-- <div>
     <h3> Name: {{customer.customerName}}</h3>
     <h3> Password: {{customer.password}}</h3>
   
   </div>
-  <a routerLink="/customerList">Back To Compnay List  </a>
+  <a routerLink="/customerList">Back To Compnay List  </a> -->
   
+  <div>
+      <h3> Name: {{customer.customerName}}</h3>
+      <!-- <h3> Password: {{company.password}}</h3> -->
+      <!-- <h3> Email: {{company.email}}</h3> -->
+      <label>password: </label><input type = "text" name="password" id="password"  placeholder="password" [(ngModel)] = "customer.password" ngModel><br>
+    
+      <button (click)="updateCustomer()">update company</button>
+     </div>
+     <br><br>
+     <br><br>
+    <a routerLink="/customerList">Back To Compnay List  </a>
 
+    
 
 
 
