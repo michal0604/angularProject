@@ -32,4 +32,21 @@ export class CompanyServiceService {
     return this.http.post<Coupon>("http://localhost:8082/webCoupon1/rest/company/updateCoupon/", coupon,{withCredentials:true});
      
   }
-}
+
+  getCouponsByPrice(price: number){ 
+   
+    return  this.http.get<Coupon[]>("http://localhost:8082/webCoupon1/rest/company/getCouponsByMaxCouponPrice/"+price);
+      
+  }
+  getCouponsByDate(date: Date){ 
+   
+    return  this.http.get<Coupon[]>("http://localhost:8082/webCoupon1/rest/company/getCouponsByMaxCouponDate/"+date);
+      
+  }
+  getCouponsByType(couponType: CouponType){ 
+   
+    return  this.http.get<Coupon[]>("http://localhost:8082/webCoupon1/rest/company/getCouponsByMaxCouponDate/"+couponType);
+      
+  }
+  }
+

@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { CompanyServiceService } from 'src/app/company-service.service';
+import { Company } from 'src/app/models/company';
+import { Coupon } from 'src/app/models/coupon';
 
 @Component({
   selector: 'app-get-coupons-by-date',
@@ -6,10 +9,33 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./get-coupons-by-date.component.css']
 })
 export class GetCouponsByDateComponent implements OnInit {
+  company: Company;
+  coupons: Coupon[] = [];
+  coupon: Coupon = new Coupon();
+  couponToUpdate = new Coupon();
+  dateToSort: Date = null;
+  
+ 
 
-  constructor() { }
+  constructor(private companyService:CompanyServiceService) { }
 
   ngOnInit() {
+  }
+
+  getCouponsByDate() {
+    
+    this.companyService.getCouponsByDate(this.dateToSort).subscribe(
+      (coupons) => {
+        this.coupons = [];
+        for (let coupon of coupons) {
+          coupon = new Coupon(coupon);
+          this.coupons.push(coupon);
+        }
+        
+      },
+      (error) => { console.error('something went wrong...') }
+    );
+
   }
 
 }
