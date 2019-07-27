@@ -41,10 +41,11 @@ const routes: Routes = [
   {path: "home", component:HomeComponent},
   {path: "products", component:ProductsComponent},
   {path:"login",component:LoginComponent},
-  {path:"admin",
-  canActivate: [AuthguardGuard],
-  component:AdminComponent},
+  // {path:"admin",
+  // canActivate: [AuthguardGuard],
+  // component:AdminComponent},
   {path:"company",component:CompanyComponent},
+  {path:"admin",component:AdminComponent},
   {path:"customer",component:CustomerComponent},
   {path:"companyList",component:CompanyListComponent},
   {path:"customerList",component:CustomerListComponent},
@@ -69,10 +70,12 @@ const routes: Routes = [
   {path:"get-customer/:customerId",component:GetCustomerComponent},
   {path:"get-coupon/:couponId",component:GetCouponComponent},
   {path:"get-coupon",component:GetCouponComponent},
-  {path:"purchase-coupon",component:PurchaseCouponComponent},
+  {path:"purchase-coupon/:couponId",component:PurchaseCouponComponent},
   {path:"get-all-purchased-coupons",component:GetAllPurchasedCouponsComponent},
   {path:"get-all-purchased-coupons-by-type",component:GetAllPurchasedCouponsByTypeComponent},
-  {path:"get-all-purchased-coupons-by-price",component:GetAllPurchasedCouponsByPriceComponent}
+  {path:"get-all-purchased-coupons-by-price",component:GetAllPurchasedCouponsByPriceComponent},
+  {path:"purchase-coupon",component:PurchaseCouponComponent},
+ 
 ];
 
 @NgModule({

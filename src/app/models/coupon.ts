@@ -36,10 +36,10 @@ export class Coupon {
             this.image = coupon.image;
         }
     }
-    public get getId(): number {
+    public get getcouponId(): number {
         return this.couponId;
     }
-    public set setId(id: number) {
+    public set setcouponId(couponId: number) {
         this.couponId = this.couponId;
     }
     public get getTitle(): string {

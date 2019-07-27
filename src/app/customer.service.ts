@@ -9,6 +9,8 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class CustomerService {
+ 
+  public coupon:Coupon = new Coupon();
 
   constructor(private http:HttpClient) { }
 
@@ -25,10 +27,10 @@ export class CustomerService {
         return this.http.get<Coupon[]>("http://localhost:8082/webCoupon1/rest/customer/getAllPurchasedCouponsByType/"+couponType);
         
          }
-         public PurchaseCoupon():Observable<Coupon[]>{
-          return this.http.get<Coupon[]>("http://localhost:8082/webCoupon1/rest/customer/purchaseCoupon",{withCredentials:true});
+         public PurchaseCoupon(couponId: number){
+          return this.http.get<Coupon>("http://localhost:8082/webCoupon1/rest/customer/purchaseCoupon/"+couponId);
           
-           }
+         }
 
-     
+           
 }
