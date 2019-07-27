@@ -1,33 +1,7 @@
-<!-- <a routerLink = '/company-list'> + Create Company</a>
 
-<h1>
-  coupons
-</h1>
-<div>
-<table>
-  <th>couponId</th>
-  <th>title</th>
-  <th>start_date</th>
-  <th>end_date</th>
-  <th>amount</th>
-  <th>type</th>
-  <th>message</th>
-  <th>price</th>
-  <th>image</th>
-  
-  <tr *ngFor = "let p of coupons">
-    <td>{{p.couponId}}</td>
-    <td>{{p.title}}</td>
-    <td>{{p.start_date}}</td>
-    <td>{{p.end_date}}</td>
-    <td>{{p.amount}</td>
-    <td>{{p.type}}</td>
-    <td>{{p.message}}</td>
-    <td>{{p.price}}</td>
-    <td>{{p.image}}</td> -->
 
     <div class="container">
-      <a routerLink = '/get-coupons'> purchased coupons</a>
+     
       
       <h1>
         Coupon
@@ -45,10 +19,11 @@
         <th>image</th>
         </thead>
         <tbody>
-        <tr *ngFor = "let p of coupons">
+        <tr *ngFor = "let p of coupons"> 
             <td>
-              <a routerLink="/get-coupon/{{p.couponId}}">{{p.title}}</a>
-            </td> 
+              <!-- <a routerLink="/get-coupon/{{p.couponId}}">{{p.title}}</a> -->
+              {{p.title}}
+            </td>  
       
           <td>{{p.start_date}}</td>
           <td>{{p.end_date}}</td>
@@ -58,12 +33,11 @@
           <td>{{p.price}}</td>
           <td>{{p.image}}</td>
         
-          
-          <!-- <td><button class="btn btn-danger"(click)="removeCoupon(p.couponId)">Delete</button> -->
-            <!-- <button class="btn btn-danger"(click)="updateCompany(p.customerId)">Update</button> -->
-          <!-- </td> -->
+        
       
         </tr>
       </tbody>
         </table>
+        <a routerLink = "/customer"> Back to Customer Menu </a>
+      
         </div>

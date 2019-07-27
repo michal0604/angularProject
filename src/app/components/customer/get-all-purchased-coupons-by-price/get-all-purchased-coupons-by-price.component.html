@@ -21,7 +21,8 @@
         <tbody>
         <tr *ngFor = "let p of coupons">
             <td>
-              <a routerLink="/get-coupon/{{p.couponId}}">{{p.title}}</a>
+              <!-- <a routerLink="/get-coupon/{{p.couponId}}">{{p.title}}</a> -->
+              {{p.title}}
             </td> 
       
           <td>{{p.start_date}}</td>
@@ -40,6 +41,8 @@
         </tr>
       </tbody>
         </table>
+
+        <a routerLink = "/customer"> Back to Customer Menu </a>
         </div>
 
    
