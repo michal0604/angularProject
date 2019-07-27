@@ -43,9 +43,9 @@ export class CompanyServiceService {
     return  this.http.get<Coupon[]>("http://localhost:8082/webCoupon1/rest/company/getCouponsByMaxCouponDate/"+date);
       
   }
-  getCouponsByType(couponType: CouponType){ 
+  getCouponsByType(couponType: couponType){ 
    
-    return  this.http.get<Coupon[]>("http://localhost:8082/webCoupon1/rest/company/getCouponsByMaxCouponDate/"+couponType);
+    return  this.http.get<Coupon[]>("http://localhost:8082/webCoupon1/rest/company/getAllCouponsByType/"+couponType);
       
   }
   }

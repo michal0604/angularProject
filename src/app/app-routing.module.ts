@@ -26,6 +26,10 @@ import { GetCouponsByTypeComponent } from './components/company/get-coupons-by-t
 import { RemoveCouponComponent } from './components/company/remove-coupon/remove-coupon.component';
 import { UpdateCouponComponent } from './components/company/update-coupon/update-coupon.component';
 import { GetCouponComponent } from './components/company/get-coupon/get-coupon.component';
+import { PurchaseCouponComponent } from './components/customer/purchase-coupon/purchase-coupon.component';
+import { GetAllPurchasedCouponsComponent } from './components/customer/get-all-purchased-coupons/get-all-purchased-coupons.component';
+import { GetAllPurchasedCouponsByTypeComponent } from './components/customer/get-all-purchased-coupons-by-type/get-all-purchased-coupons-by-type.component';
+import { GetAllPurchasedCouponsByPriceComponent } from './components/customer/get-all-purchased-coupons-by-price/get-all-purchased-coupons-by-price.component';
 
 
 
@@ -64,7 +68,11 @@ const routes: Routes = [
   {path:"get-company/:companyId",component:GetCompanyComponent},
   {path:"get-customer/:customerId",component:GetCustomerComponent},
   {path:"get-coupon/:couponId",component:GetCouponComponent},
-  {path:"get-coupon",component:GetCouponComponent}
+  {path:"get-coupon",component:GetCouponComponent},
+  {path:"purchase-coupon",component:PurchaseCouponComponent},
+  {path:"get-all-purchased-coupons",component:GetAllPurchasedCouponsComponent},
+  {path:"get-all-purchased-coupons-by-type",component:GetAllPurchasedCouponsByTypeComponent},
+  {path:"get-all-purchased-coupons-by-price",component:GetAllPurchasedCouponsByPriceComponent}
 ];
 
 @NgModule({

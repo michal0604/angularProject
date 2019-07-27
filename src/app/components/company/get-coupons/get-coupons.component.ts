@@ -18,6 +18,7 @@ export class GetCouponsComponent implements OnInit {
   constructor(private activatedRoute:ActivatedRoute ,private companyService:CompanyServiceService) { }
 
   ngOnInit() {
+    
     this.companyService.getCoupons().subscribe(coupons =>{
       this.coupons = coupons;
    },err =>{

@@ -5,7 +5,7 @@
 //     public start_date?: Date,
 //     public end_date?: Date,
 //     public amount?: number,
-//     public type?: CouponType,
+//     public type?: string,
 //     public message?: string,
 //     public price?: number,
 //     public image?: string)
@@ -15,10 +15,10 @@
 export class Coupon {
     private couponId: number;
     private title: string;
-    private start_date: Date;
-    private end_date: Date;
+    private start_date: string;
+    private end_date: string;
     private amount: number;
-    private type: CouponType;
+    private type: couponType;
     private message: string;
     private price: number;
     private image: string;
@@ -48,16 +48,16 @@ export class Coupon {
     public set setTitle(title: string) {
         this.title = title;
     }
-    public get getStart_date(): Date {
+    public get getStart_date(): string {
         return this.start_date;
     }
-    public set setStart_date(start_date: Date) {
+    public set setStart_date(start_date: string) {
         this.start_date = start_date;
     }
-    public get getEnd_date(): Date {
+    public get getEnd_date(): string {
         return this.end_date;
     }
-    public set setEnd_date(end_date: Date) {
+    public set setEnd_date(end_date: string) {
         this.end_date = end_date;
     }
 
@@ -68,10 +68,10 @@ export class Coupon {
         this.amount = amount;
     }
 
-    public get getType(): CouponType {
+    public get getType(): couponType {
         return this.type;
     }
-    public set setType(type: CouponType) {
+    public set setType(type: couponType) {
         this.type = type;
     }
 
@@ -97,5 +97,6 @@ export class Coupon {
     }
 
 }
+
 
     

@@ -1,25 +1,11 @@
 
 
    <div class="col-md-12"> -->
-     <div id="insertType" class="collapse">
-      <label for="type">choose type:</label>
-      <select class="form-control" [(ngModel)]="typeToSort">
-        <option>Food</option>
-        <option>Resturans</option>
-        <option>Electricity</option>
-        <option>Health</option>
-        <option>Sports</option>
-        <option>Camping</option>
-        <option>Traveling</option>
-      </select>
-      <button class="btn btn-warning btn-sm" (click)="getCouponsByType()">Filter!</button>
+    <div id="insertPrice" class="collapse">
+      <label for="Price">Insert maximum price:</label>
+      <input type="number" [(ngModel)]="priceToSort">
+      <button class="btn btn-warning btn-sm" (click)="getAllPurchasedCouponsByPrice()">Filter!</button>
     </div>
-  </div>   
-
- 
-
-
-
 
       <table>
         <thead>
@@ -46,12 +32,14 @@
           <td>{{p.price}}</td>
           <td>{{p.image}}</td>
         
-
+          
+          <!-- <td><button class="btn btn-danger"(click)="removeCoupon(p.couponId)">Delete</button>
+            <button class="btn btn-danger"(click)="updateCompany(p.customerId)">Update</button>
+          </td> -->
       
         </tr>
       </tbody>
         </table>
-        
-       
+        </div>
 
    

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Coupon } from 'src/app/models/coupon';
 import { Company } from 'src/app/models/company';
+import { CompanyServiceService } from 'src/app/company-service.service';
 
 @Component({
   selector: 'app-get-coupons-by-type',
@@ -8,13 +9,13 @@ import { Company } from 'src/app/models/company';
   styleUrls: ['./get-coupons-by-type.component.css']
 })
 export class GetCouponsByTypeComponent implements OnInit {
-  companyService: any;
-  typeToSort: CouponType = null;
+  
+  typeToSort: couponType = null;
   coupons: Coupon[] = [];
   coupon: Coupon = new Coupon();
   company: Company;
 
-  constructor() { }
+  constructor(private companyService:CompanyServiceService) { }
 
   ngOnInit() {
   }
@@ -22,12 +23,14 @@ export class GetCouponsByTypeComponent implements OnInit {
   getCouponsByType() {
    
     this.companyService.getCouponsByType(this.typeToSort).subscribe(
+      
       (coupons) => {
         this.coupons = [];
         for (let coupon of coupons) {
           coupon = new Coupon(coupon);
           this.coupons.push(coupon);
         }
+        
       },
       (error) => { console.error('something went wrong...') }
     );
