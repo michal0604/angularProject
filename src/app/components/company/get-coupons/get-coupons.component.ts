@@ -34,7 +34,7 @@ export class GetCouponsComponent implements OnInit {
          this.coupon=coup;
       
         alert(JSON.stringify(this.removeCoupon));
-        this.router.navigate(["/home"]);
+        this.router.navigate(["/get-coupons"]);
       },response =>{
       console.log(id);
      
