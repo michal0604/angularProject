@@ -46,6 +46,6 @@ return this.httpClient.get<LoginResult>("/assets/json/server-demo.json");
   public logout():void{
 this.type="";
 this.isLoggedIn=false;
-//bj
+//jgjgjgjgjgj
   }
 }
