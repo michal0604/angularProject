@@ -1,4 +1,4 @@
-
+<!-- 
 	
 	<h3>Please fill your name and password:</h3>
   <form (submit)="loginUser($event)">
@@ -22,4 +22,26 @@
 	<div class="input">
 		<input type="submit" value="Login">
 	</div>
+</form> -->
+
+<form>
+
+		<label>Type:</label>
+		<select name="type" [(ngModel)]="credentials.type">
+			<option selected disabled>Select Type</option>
+			<option value ="customer">Customer</option>
+			<option value ="company">Company</option>
+			<option value ="admin">Admin</option>
+		</select>
+		<br><br>
+	<label>Username:</label>
+	<input type="text" name="username" [(ngModel)]="credentials.username">
+	<br><br>
+
+	<label>Password:</label>
+	<input type="password" name="password" [(ngModel)]="credentials.password">
+	<br><br>
+
+	
+	<button (click)="login()">Login</button>
 </form>

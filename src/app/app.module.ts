@@ -39,8 +39,8 @@ import { RemoveCouponComponent } from './components/company/remove-coupon/remove
 import { UpdateCouponComponent } from './components/company/update-coupon/update-coupon.component';
 import { FormsModule } from '@angular/forms';
 import { GetCouponComponent } from './components/company/get-coupon/get-coupon.component';
-import { PurchaseCouponComponent } from './components/customer/purchase-coupon/purchase-coupon.component';
-import { GetAllPurchasedCouponsComponent } from './components/customer/get-all-purchased-coupons/get-all-purchased-coupons.component';
+// import { PurchaseCouponComponent } from './components/customer/purchase-coupon/purchase-coupon.component';
+// import { GetAllPurchasedCouponsComponent } from './components/customer/get-all-purchased-coupons/get-all-purchased-coupons.component';
 import { GetAllPurchasedCouponsByTypeComponent } from './components/customer/get-all-purchased-coupons-by-type/get-all-purchased-coupons-by-type.component';
 import { GetAllPurchasedCouponsByPriceComponent } from './components/customer/get-all-purchased-coupons-by-price/get-all-purchased-coupons-by-price.component';
 
@@ -108,8 +108,8 @@ const appRoutes:Routes = [
     RemoveCouponComponent,
     UpdateCouponComponent,
     GetCouponComponent,
-    PurchaseCouponComponent,
-    GetAllPurchasedCouponsComponent,
+    // PurchaseCouponComponent,
+    // GetAllPurchasedCouponsComponent,
     GetAllPurchasedCouponsByTypeComponent,
     GetAllPurchasedCouponsByPriceComponent
    
