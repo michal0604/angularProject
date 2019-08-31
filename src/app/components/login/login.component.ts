@@ -22,6 +22,7 @@ export class LoginComponent  {
   public constructor(private loginService:LoginService,private router:Router){
 
 }
+
 public login():void{
   this.loginService.isExist(this.credentials).subscribe(loginResult=>{
     if(!loginResult.isLoggedIn){
@@ -33,11 +34,12 @@ public login():void{
     }
     if (loginResult.type==="customer"){
      this.router.navigate(["/customer"]);
+     
    }
-   else if (loginResult.type==="company"){
+    if (loginResult.type==="company"){
     this.router.navigate(["/company"]);
   }
-  else if (loginResult.type==="admin"){
+   if (loginResult.type==="admin"){
     this.router.navigate(["/admin"]);
   
   }
@@ -45,25 +47,25 @@ public login():void{
   });
 }
  
-  public loginDemo():void{
-    if (this.loginService.isExistDemo(this.credentials)){
-      if (this.credentials.type==="customer"){
-        this.router.navigate(["/customer"]);
-      }
-      else if (this.credentials.type==="company"){
-        this.router.navigate(["/company"]);
-      }
-      else if (this.credentials.type==="admin"){
-        this.router.navigate(["/admin"]);
-      }
+  // public loginDemo():void{
+  //   if (this.loginService.isExistDemo(this.credentials)){
+  //     if (this.credentials.type==="customer"){
+  //       this.router.navigate(["/customer"]);
+  //     }
+  //     else if (this.credentials.type==="company"){
+  //       this.router.navigate(["/company"]);
+  //     }
+  //     else if (this.credentials.type==="admin"){
+  //       this.router.navigate(["/admin"]);
+  //     }
 
-    }
-    else{
+  //   }
+  //   else{
 
     
-    alert("Incorrect username or password");
-  }
-  }
+  //   alert("Incorrect username or password");
+  // }
+  // }
   // loginUser(e) {
   //   e.preventDefault();
   // 	console.log(e);
@@ -84,10 +86,13 @@ public login():void{
   // 		this.router.navigate(['customer']);
       
   //   }
-  }
+
+}
+      
+  
   
  
-
+  
 
  
     

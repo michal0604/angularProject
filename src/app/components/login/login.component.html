@@ -24,7 +24,7 @@
 	</div>
 </form> -->
 
-<form>
+<!-- <form>
 
 		<label>Type:</label>
 		<select name="type" [(ngModel)]="credentials.type">
@@ -35,13 +35,39 @@
 		</select>
 		<br><br>
 	<label>Username:</label>
-	<input type="text" name="username" [(ngModel)]="credentials.username">
+	<input type="text" name="name" [(ngModel)]="credentials.name">
 	<br><br>
 
 	<label>Password:</label>
-	<input type="password" name="password" [(ngModel)]="credentials.password">
+	<input type="password" name="pass" [(ngModel)]="credentials.pass">
 	<br><br>
 
 	
 	<button (click)="login()">Login</button>
-</form>
+</form> -->
+
+<div class="login">
+		<form class="wow animated zoomIn">
+			<p>Please Enter Your Details</p>
+		  <label class="wow">Username: </label>
+		  <input type="text" name="username" [(ngModel)]="credentials.username">
+		  <br><br>
+		
+		  <label class="wow">Password: </label>
+		  <input type="password" name="password" [(ngModel)]="credentials.password">
+		  <br><br>
+		
+		  <label class="wow">Client Type: </label>
+		  <select name="type" [(ngModel)]="credentials.type">
+			<option selected disabled>Select Your Type</option>
+			<option value="admin">Admin</option>
+			<option value="company">Company</option>
+			<option value="customer">Customer</option>
+		  </select>
+		  <br><br>
+		
+		  <button (click)="login()" class="buttonLogin">Login</button>&nbsp; &nbsp;
+		  <button type="reset" class="button">Reset</button>
+		
+		</form>
+		</div>
