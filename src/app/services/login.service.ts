@@ -46,7 +46,7 @@ public constructor(private httpClient:HttpClient){
     
   // }
 
-  public isExist(credentials: Credentials): Observable<LoginResult> {//public isExistDemo//boolean
+  public isExist(credentials: Credentials): Observable<LoginResult> {
 
     if(credentials.type === "admin" && credentials.username === "admin" && credentials.password === "1234") {
       this.isLoggedIn = true;
@@ -65,7 +65,7 @@ public constructor(private httpClient:HttpClient){
       this.type = credentials.type;
       return this.httpClient.post<LoginResult>("http://localhost:8082/webCoupon1/login?customerName=customer&password=customer&type=customer",credentials,{withCredentials:true})
     }
-    alert("Wrong coordinates! Try again ");//return false;
+    alert(" Try again please ");
 
   }
   public logout():void{
